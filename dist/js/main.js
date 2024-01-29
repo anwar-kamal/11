@@ -95,11 +95,11 @@ const update = () => {
 function expand ( elementId ) {
 	const text = document.getElementById( elementId )
 	if ( text.classList.contains( 'line-clamp-1' || 'truncate' ) ) {
-		
-		text.classList.remove( 'line-clamp-1' || 'truncate')
-	text.classList.add( '!line-clamp-none' )
+
+		text.classList.remove( 'line-clamp-1' || 'truncate' )
+		text.classList.add( '!line-clamp-none' )
 	}
-	} 
+}
 
 
 
