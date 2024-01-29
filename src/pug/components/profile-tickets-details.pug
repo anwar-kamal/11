@@ -1,0 +1,122 @@
+include ../mixins/table.pug
+include ../mixins/button-sec.pug
+include ../mixins/modal
+main.flex-grow.grid.gap-6.overflow-hidden.content-start.relative(class="p-3 md:py-6 md:px-6  lg:py-8 lg:px-12" x-data="{step:1,s:1 , next() {if (this.step < 3) this.step++;if (this.s < 4) this.s++;this.orderSuccessfully = this.s === 4;} ,prev(){if(this.step >= 1)this.step--}}")
+	include ./head-tabs
+	.cent__bet.gap-4
+		.header__primary__start Ticket Detail & History - Muhammad
+			| Muhammad Abdullah
+		div(@click="editStartDate = false")  
+			+button-sec('Share',""," w-full")
+	.grid.gap-8
+		div(class="  bg-white rounded-2xl border border-gray-300 p-4 py-6 grid gap-6 content-start")
+			.sub__header__primary  My Info
+			.grid.content-start(class=" md:grid-cols-2  lg:gap-x-16 gap-6  ")
+				.cent__bet.gap-6
+					h4( class="text-zinc-600 text-xs font-normal  tracking-wider") No.
+					p(class="text-neutral-700 text-sm font-bold cent gap-2 ") 4115
+		
+				.cent__bet.gap-6
+					h4( class="text-zinc-600 text-xs font-normal  tracking-wider") Type
+					p(class="text-neutral-700 text-sm font-bold ") Agreements
+				.cent__bet.gap-6
+					h4( class="text-zinc-600 text-xs font-normal  tracking-wider") Created by
+					p(class="text-neutral-700 text-sm font-bold ") Israa Magdy
+				.cent__bet.gap-6
+					h4( class="text-zinc-600 text-xs font-normal  tracking-wider") Branch
+					p(class="text-neutral-700 text-sm font-bold ") Proleaders Rayyan Riyad – Female
+				.cent__bet.gap-6
+					h4( class="text-zinc-600 text-xs font-normal  tracking-wider") Source
+					a( href=" " class="text-primary text-sm font-bold ") Call
+			include ./line-breake
+			.sub__header__primary  Description
+			.grid.content-start
+				div.text-start 📌المحاسبه لغير المحاسبين 📌مده الدوره شهر المحاضرات من الأحد إلى الخميس ساعتين باليوم 📌المحاضرات عن بعد بث مباشر تفاعلي من خلال منصتنا الإفتراضية برو اونلاين وبعد انتهاء البث المباشر بتكوين المحاضرة مسجله في حساب حضرتك 📌الشهادة معتمده من المؤسسه العامه للتدريب التقني والمهني بالمملكة العربية السعودية محاور دورة المحاسبة لغير المحاسبين. 📌المفاهيم المحاسبية الأساسية. 📌المعادلة المحاسبية وتحليل العمليات المالية. 📌التعرف على كيفية عمل التحاليل للعمليات المالية والمعادلات الحسابية. 📌الدورة المحاسبية وأساليب تسجيل وترحيل القيود المحاسبية. 📌عناصر القوائم المالية الأساسية وأهميتها. 📌تعلم أساليب تسجيل وترحيل بيقول دا الرساله اللي اتبعتتلي وع اساسها سجلت بس مالاقيت دا بالدوره
+		
+		+table()
+			+t('thead')
+				th(scope='col') #
+				th(scope='col')  Status
+				th(scope='col') Source
+				th(scope='col') By
+				th(scope='col')  Comment
+				th(scope='col') Created At
+				th(scope='col') Attachments 
+			+t('tbody')
+				tr 
+					th 1
+					th General English
+					td Customer Care Team
+					td Shaimaa Mohamed
+					td 
+						.cent.whitespace-break-spaces.w-96 
+							span.line-clamp-1.t1 تم ارسال الامر الي قسم التشغيل لافادتنا فيما هو موضح ب ان الطالبة قالت لها محاضرتين تدرس المحاسبة ومافي الاشياء اللي اشتركت
+							button.font-semibold.text-primary.text-nowrap(href=""   onclick="expand('t1')")  اقرا المزيد
+
+					td Dec 21, 2023, 1:46 pm
+					td 
+						include ./svgs/eye
+				
+				
+				tr 
+					th 1
+					th General English
+					td Customer Care Team
+					td Shaimaa Mohamed
+					td 
+						.cent.whitespace-break-spaces.w-96 
+							span.line-clamp-1.t1 تم ارسال الامر الي قسم التشغيل لافادتنا فيما هو موضح ب ان الطالبة قالت لها محاضرتين تدرس المحاسبة ومافي الاشياء اللي اشتركت
+							button.font-semibold.text-primary.text-nowrap(href=""   onclick="expand('t1')")  اقرا المزيد
+
+					td Dec 21, 2023, 1:46 pm
+					td 
+						include ./svgs/eye
+				
+				
+				tr 
+					th 1
+					th General English
+					td Customer Care Team
+					td Shaimaa Mohamed
+					td 
+						.cent.whitespace-break-spaces.w-96 
+							span.line-clamp-1.t1 تم ارسال الامر الي قسم التشغيل لافادتنا فيما هو موضح ب ان الطالبة قالت لها محاضرتين تدرس المحاسبة ومافي الاشياء اللي اشتركت
+							button.font-semibold.text-primary.text-nowrap(href=""   onclick="expand('t1')")  اقرا المزيد
+
+					td Dec 21, 2023, 1:46 pm
+					td 
+						include ./svgs/eye
+				
+				
+				tr 
+					th 1
+					th General English
+					td Customer Care Team
+					td Shaimaa Mohamed
+					td 
+						.cent.whitespace-break-spaces.w-96 
+							span.line-clamp-1.t1 تم ارسال الامر الي قسم التشغيل لافادتنا فيما هو موضح ب ان الطالبة قالت لها محاضرتين تدرس المحاسبة ومافي الاشياء اللي اشتركت
+							button.font-semibold.text-primary.text-nowrap(href=""   onclick="expand('t1')")  اقرا المزيد
+
+					td Dec 21, 2023, 1:46 pm
+					td 
+						include ./svgs/eye
+				
+				
+				tr 
+					th 1
+					th General English
+					td Customer Care Team
+					td Shaimaa Mohamed
+					td 
+						.cent.whitespace-break-spaces.w-96 
+							span.line-clamp-1#t1 تم ارسال الامر الي قسم التشغيل لافادتنا فيما هو موضح ب ان الطالبة قالت لها محاضرتين تدرس المحاسبة ومافي الاشياء اللي اشتركت
+							button.font-semibold.text-primary.text-nowrap(href=""   onclick="expand('t1')")  اقرا المزيد
+
+					td Dec 21, 2023, 1:46 pm
+					td 
+						include ./svgs/eye
+				
+				
+		.cent 
+			include ./pagination
